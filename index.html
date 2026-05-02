@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaveUp — Privacy-First Finance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg: #F8F6F0;
@@ -15,10 +18,14 @@
             --green: #52B788;
             --green-dark: #2D6A4F;
             --white: #FFFFFF;
-            --card-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -28,7 +35,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3 { font-family: 'DM Serif Display', serif; }
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+        }
 
         .container {
             max-width: 1100px;
@@ -44,8 +55,15 @@
             align-items: center;
         }
 
-        .logo { font-size: 24px; font-weight: 700; color: var(--text-primary); }
-        .logo span { color: var(--green); }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .logo span {
+            color: var(--green);
+        }
 
         /* --- Hero --- */
         .hero {
@@ -69,7 +87,10 @@
             max-width: 480px;
         }
 
-        .cta-group { display: flex; gap: 16px; }
+        .cta-group {
+            display: flex;
+            gap: 16px;
+        }
 
         .btn {
             padding: 16px 32px;
@@ -89,16 +110,19 @@
 
         .btn-primary:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .btn-secondary {
             background-color: var(--white);
             color: var(--text-primary);
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .btn-secondary:hover { background-color: #fcfcfc; transform: translateY(-4px); }
+        .btn-secondary:hover {
+            background-color: #fcfcfc;
+            transform: translateY(-4px);
+        }
 
         .hero-image img {
             width: 100%;
@@ -108,8 +132,10 @@
             transform: rotate(5deg);
             transition: transform 0.5s ease;
         }
-        
-        .hero-image:hover img { transform: rotate(0deg) scale(1.02); }
+
+        .hero-image:hover img {
+            transform: rotate(0deg) scale(1.02);
+        }
 
         /* --- Features --- */
         .features {
@@ -130,7 +156,9 @@
             transition: transform 0.3s ease;
         }
 
-        .feature-card:hover { transform: translateY(-10px); }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
 
         .feature-card .icon {
             font-size: 32px;
@@ -138,8 +166,15 @@
             display: block;
         }
 
-        .feature-card h3 { margin-bottom: 12px; font-size: 24px; }
-        .feature-card p { color: var(--text-secondary); font-size: 15px; }
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
 
         /* --- Download Section --- */
         .download {
@@ -147,7 +182,10 @@
             text-align: center;
         }
 
-        .download h2 { font-size: 48px; margin-bottom: 40px; }
+        .download h2 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
 
         .download-grid {
             display: flex;
@@ -156,7 +194,7 @@
             flex-wrap: wrap;
         }
 
-        .dl-card {
+        docs/index.html .dl-card {
             background: var(--white);
             padding: 32px;
             border-radius: 24px;
@@ -165,45 +203,74 @@
             text-align: left;
         }
 
-        .dl-card h4 { font-size: 18px; margin-bottom: 8px; }
-        .dl-card .version { font-size: 12px; color: var(--green); font-weight: 700; margin-bottom: 24px; display: block; }
+        .dl-card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .dl-card .version {
+            font-size: 12px;
+            color: var(--green);
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: block;
+        }
 
         footer {
             padding: 60px 0;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
             text-align: center;
             color: var(--text-secondary);
             font-size: 14px;
         }
 
         @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-content p { margin: 0 auto 40px; }
-            .cta-group { justify-content: center; flex-direction: column; }
-            .features-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 48px; }
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin: 0 auto 40px;
+            }
+
+            .cta-group {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <nav>
             <div class="logo">Save<span>Up</span></div>
-            <a href="https://github.com/Danmaialemida/SaveUp-App" class="btn btn-secondary" style="padding: 10px 20px; font-size: 14px;">View Project</a>
+            <a href="https://github.com/Danmaialemida/SaveUp-App" class="btn btn-secondary"
+                style="padding: 10px 20px; font-size: 14px;">View Project</a>
         </nav>
 
         <section class="hero">
             <div class="hero-content">
                 <h1>Financial freedom, kept <span>Private</span>.</h1>
-                <p>Manage your family budget with a sleek, local-first app. No cloud, no tracking, just smart finance on your terms.</p>
+                <p>Manage your budget with a sleek, local-first app. No cloud, no tracking, just smart finance on
+                    your terms.</p>
                 <div class="cta-group">
                     <a href="#download" class="btn btn-primary">Download App</a>
                     <a href="https://github.com/Danmaialemida/SaveUp-App" class="btn btn-secondary">Documentation</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="mockup.png" alt="SaveUp App Interface">
+                <img src="docs/mockup.png" alt="SaveUp App Interface">
             </div>
         </section>
     </div>
@@ -214,7 +281,8 @@
                 <div class="feature-card">
                     <span class="icon">🛡️</span>
                     <h3>Total Privacy</h3>
-                    <p>Your data never leaves your devices. We don't have servers, so we can't see your transactions.</p>
+                    <p>Your data never leaves your devices. We don't have servers, so we can't see your transactions.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <span class="icon">🔄</span>
@@ -233,25 +301,36 @@
     <section class="pricing" id="pricing" style="padding: 100px 0; text-align: center;">
         <div class="container">
             <h2 style="font-size: 48px; margin-bottom: 40px;">Simple, transparent pricing</h2>
-            <div class="download-grid">
-                <!-- Free -->
-                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.05);">
+            <div class="download-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+                <!-- Solo -->
+                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.05); text-align: left; background: white; padding: 32px; border-radius: 24px;">
                     <h4>Solo (Free)</h4>
-                    <span class="version" style="color: var(--text-secondary);">R$ 0</span>
-                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; text-align: left;">
+                    <span class="version" style="color: var(--text-secondary); display: block; margin-bottom: 24px;">R$ 0</span>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
                         <li style="margin-bottom: 8px;">✓ 1 User (Admin)</li>
                         <li style="margin-bottom: 8px;">✓ Local storage</li>
                         <li style="margin-bottom: 8px;">✓ Basic budgeting</li>
                     </ul>
                     <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center;">Get Started</a>
                 </div>
+                <!-- Basic -->
+                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.05); text-align: left; background: white; padding: 32px; border-radius: 24px;">
+                    <h4>Basic</h4>
+                    <span class="version" style="color: var(--green); display: block; margin-bottom: 24px; font-weight: 700;">R$ 4,90/mo</span>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
+                        <li style="margin-bottom: 8px;">✓ 2 Users (Sync enabled)</li>
+                        <li style="margin-bottom: 8px;">✓ Wi-Fi Sync</li>
+                        <li style="margin-bottom: 8px;">✓ Multi-device support</li>
+                    </ul>
+                    <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center;">Go Basic</a>
+                </div>
                 <!-- Premium -->
-                <div class="dl-card" style="border: 2px solid var(--green); transform: scale(1.05); position: relative;">
+                <div class="dl-card" style="border: 2px solid var(--green); text-align: left; background: white; padding: 32px; border-radius: 24px; position: relative; transform: scale(1.05);">
                     <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--green); color: white; padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700; text-transform: uppercase;">Best Value</div>
-                    <h4>Family (Premium)</h4>
-                    <span class="version">R$ 9,90/mo</span>
-                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; text-align: left;">
-                        <li style="margin-bottom: 8px;">✓ Up to 10 Family Members</li>
+                    <h4>Premium</h4>
+                    <span class="version" style="color: var(--green); display: block; margin-bottom: 24px; font-weight: 700;">R$ 9,90/mo</span>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
+                        <li style="margin-bottom: 8px;">✓ Up to 10 Users</li>
                         <li style="margin-bottom: 8px;">✓ Full Wi-Fi Sync</li>
                         <li style="margin-bottom: 8px;">✓ Windows & Mac Apps</li>
                         <li style="margin-bottom: 8px;">✓ Advanced Reports</li>
@@ -270,17 +349,21 @@
                 <div class="dl-card">
                     <h4>Android Mobile</h4>
                     <span class="version" style="color: #6B6860;">Coming Soon</span>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Exclusively available through the Google Play Store for security and updates.</p>
+                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Exclusively available
+                        through the Google Play Store for security and updates.</p>
                     <div style="opacity: 0.6; pointer-events: none;">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="width: 100%;">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                            alt="Get it on Google Play" style="width: 100%;">
                     </div>
                 </div>
                 <!-- Windows -->
                 <div class="dl-card">
                     <h4>Windows Desktop</h4>
                     <span class="version">v2.0.0 Stable</span>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Sync with your phone and manage data on a larger screen.</p>
-                    <a href="https://github.com/Danmaialemida/SaveUp-App/releases" class="btn btn-secondary" style="width: 100%; justify-content: center;">Download .EXE</a>
+                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Sync with your phone
+                        and manage data on a larger screen.</p>
+                    <a href="https://github.com/Danmaialemida/SaveUp-App/releases" class="btn btn-secondary"
+                        style="width: 100%; justify-content: center;">Download .EXE</a>
                 </div>
             </div>
         </div>
@@ -293,4 +376,5 @@
     </footer>
 
 </body>
+
 </html>
