@@ -296,48 +296,52 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="pricing" id="pricing" style="padding: 100px 0; text-align: center;">
+       <section class="pricing" id="pricing" style="padding: 100px 0; text-align: center;">
         <div class="container">
             <h2 style="font-size: 48px; margin-bottom: 40px;">Simple, transparent pricing</h2>
-            <div class="download-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+            <div class="download-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1100px; margin: 0 auto; align-items: stretch;">
                 <!-- Solo -->
-                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.05); text-align: left; background: white; padding: 32px; border-radius: 24px;">
-                    <h4>Solo (Free)</h4>
-                    <span class="version" style="color: var(--text-secondary); display: block; margin-bottom: 24px;">$0</span>
-                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
-                        <li style="margin-bottom: 8px;">✓ 1 User (Admin)</li>
-                        <li style="margin-bottom: 8px;">✓ Local storage</li>
-                        <li style="margin-bottom: 8px;">✓ Basic budgeting</li>
+                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.1); text-align: left; background: white; padding: 40px; border-radius: 32px; box-shadow: var(--card-shadow); display: flex; flex-direction: column;">
+                    <h4 style="font-size: 24px; margin-bottom: 12px;">Solo (Free)</h4>
+                    <span class="version" style="color: var(--text-secondary); display: block; margin-bottom: 32px; font-size: 32px; font-weight: 700;">$0</span>
+                    <ul style="list-style: none; font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; padding: 0; flex-grow: 1;">
+                        <li style="margin-bottom: 12px;">✓ 1 User (Admin)</li>
+                        <li style="margin-bottom: 12px;">✓ Local storage only</li>
+                        <li style="margin-bottom: 12px;">✓ Basic budgeting</li>
+                        <li style="margin-bottom: 12px;">✓ No Wi-Fi Sync</li>
                     </ul>
-                    <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center;">Get Started</a>
+                    <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center; padding: 18px;">Get Started</a>
                 </div>
                 <!-- Basic -->
-                <div class="dl-card" style="border: 1px solid rgba(0,0,0,0.05); text-align: left; background: white; padding: 32px; border-radius: 24px;">
-                    <h4>Basic</h4>
-                    <span class="version" style="color: var(--green); display: block; margin-bottom: 24px; font-weight: 700;">$4.90/mo</span>
-                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
-                        <li style="margin-bottom: 8px;">✓ 2 Users (Sync enabled)</li>
-                        <li style="margin-bottom: 8px;">✓ Wi-Fi Sync</li>
-                        <li style="margin-bottom: 8px;">✓ Multi-device support</li>
+                <div class="dl-card" style="border: 2px solid rgba(82, 183, 136, 0.3); text-align: left; background: white; padding: 40px; border-radius: 32px; box-shadow: var(--card-shadow); display: flex; flex-direction: column;">
+                    <h4 style="font-size: 24px; margin-bottom: 12px;">Basic</h4>
+                    <span class="version" style="color: var(--green); display: block; margin-bottom: 32px; font-size: 32px; font-weight: 700;">$4.90<span style="font-size: 14px; font-weight: 400;">/mo</span></span>
+                    <ul style="list-style: none; font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; padding: 0; flex-grow: 1;">
+                        <li style="margin-bottom: 12px;">✓ 2 Users (Sync enabled)</li>
+                        <li style="margin-bottom: 12px;">✓ Full Wi-Fi Sync</li>
+                        <li style="margin-bottom: 12px;">✓ Multi-device support</li>
+                        <li style="margin-bottom: 12px;">✓ Email support</li>
                     </ul>
-                    <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center;">Go Basic</a>
+                    <a href="#download" class="btn btn-secondary" style="width: 100%; justify-content: center; padding: 18px; border: 1px solid var(--green); color: var(--green);">Go Basic</a>
                 </div>
                 <!-- Premium -->
-                <div class="dl-card" style="border: 2px solid var(--green); text-align: left; background: white; padding: 32px; border-radius: 24px; position: relative; transform: scale(1.05);">
-                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--green); color: white; padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700; text-transform: uppercase;">Best Value</div>
-                    <h4>Premium</h4>
-                    <span class="version" style="color: var(--green); display: block; margin-bottom: 24px; font-weight: 700;">$9.90/mo</span>
-                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; padding: 0;">
-                        <li style="margin-bottom: 8px;">✓ Up to 10 Users</li>
-                        <li style="margin-bottom: 8px;">✓ Full Wi-Fi Sync</li>
-                        <li style="margin-bottom: 8px;">✓ Windows & Mac Apps</li>
-                        <li style="margin-bottom: 8px;">✓ Advanced Reports</li>
+                <div class="dl-card" style="border: 2px solid var(--green); text-align: left; background: white; padding: 40px; border-radius: 32px; box-shadow: 0 30px 60px rgba(82, 183, 136, 0.15); display: flex; flex-direction: column; position: relative; transform: scale(1.05); z-index: 2;">
+                    <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: var(--green); color: white; padding: 6px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Best Value</div>
+                    <h4 style="font-size: 24px; margin-bottom: 12px;">Premium</h4>
+                    <span class="version" style="color: var(--green); display: block; margin-bottom: 32px; font-size: 32px; font-weight: 700;">$9.90<span style="font-size: 14px; font-weight: 400;">/mo</span></span>
+                    <ul style="list-style: none; font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; padding: 0; flex-grow: 1;">
+                        <li style="margin-bottom: 12px;">✓ Up to 10 Users</li>
+                        <li style="margin-bottom: 12px;">✓ Full Wi-Fi Sync</li>
+                        <li style="margin-bottom: 12px;">✓ Windows & Mac Apps</li>
+                        <li style="margin-bottom: 12px;">✓ Advanced Reports</li>
+                        <li style="margin-bottom: 12px;">✓ Priority support</li>
                     </ul>
-                    <a href="#download" class="btn btn-primary" style="width: 100%; justify-content: center;">Go Premium</a>
+                    <a href="#download" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 18px; background: var(--green);">Go Premium</a>
                 </div>
             </div>
+        </div>
+    </section>
+v>
         </div>
     </section>
 
