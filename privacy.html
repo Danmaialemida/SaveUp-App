@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — SaveUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F8F6F0;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B6860;
+            --text-muted: #9E9B94;
+            --green: #52B788;
+            --green-dark: #2D6A4F;
+            --white: #FFFFFF;
+            --border: rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 { font-family: 'DM Serif Display', serif; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Nav ── */
+        nav {
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); }
+        .logo img { height: 38px; width: auto; }
+        .logo span { font-family: 'DM Serif Display', serif; font-size: 22px; }
+        .back-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--green-dark); }
+
+        /* ── Hero ── */
+        .hero {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 0 48px;
+            text-align: center;
+        }
+        .hero .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(82,183,136,0.1);
+            border: 1px solid rgba(82,183,136,0.25);
+            border-radius: 99px;
+            padding: 5px 14px;
+            font-size: 12px;
+            color: var(--green-dark);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 { font-size: 44px; letter-spacing: -1px; margin-bottom: 14px; }
+        .hero p { color: var(--text-secondary); font-size: 16px; max-width: 520px; margin: 0 auto; }
+        .hero .updated {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ── Content ── */
+        .content { padding: 64px 0 80px; }
+
+        .toc {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 48px;
+        }
+        .toc h3 { font-size: 16px; margin-bottom: 14px; color: var(--text-secondary); font-family: 'DM Sans', sans-serif; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; font-size: 11px; }
+        .toc ol { padding-left: 20px; }
+        .toc li { margin-bottom: 6px; }
+        .toc a { color: var(--green-dark); text-decoration: none; font-size: 14px; font-weight: 500; }
+        .toc a:hover { text-decoration: underline; }
+
+        .section {
+            margin-bottom: 48px;
+            scroll-margin-top: 24px;
+        }
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2 .num {
+            width: 32px; height: 32px;
+            background: var(--green-dark);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .section p { color: var(--text-secondary); margin-bottom: 14px; font-size: 15px; }
+        .section p:last-child { margin-bottom: 0; }
+        .section ul, .section ol { padding-left: 22px; color: var(--text-secondary); font-size: 15px; }
+        .section li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: rgba(82,183,136,0.08);
+            border-left: 3px solid var(--green);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .highlight-box p { color: var(--text-primary); font-weight: 500; margin: 0; }
+
+        .permission-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .permission-row:last-child { border-bottom: none; }
+        .perm-icon {
+            width: 38px; height: 38px;
+            background: var(--bg);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .perm-name { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+        .perm-desc { font-size: 13px; color: var(--text-secondary); }
+
+        .third-party-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 16px;
+        }
+        .third-party-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; font-family: 'DM Sans', sans-serif; }
+        .third-party-card p { font-size: 13px; color: var(--text-secondary); margin: 0; }
+        .third-party-card a { color: var(--green-dark); }
+
+        .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--text-primary);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+        }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .section h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="SaveUp_logo.png" alt="SaveUp">
+            <span>SaveUp</span>
+        </a>
+        <a href="index.html" class="back-link">← Back to home</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="container">
+            <div class="badge">🔒 Privacy Policy</div>
+            <h1>Your data stays yours</h1>
+            <p>SaveUp is built on a simple principle: your financial data never leaves your device unless you choose to share it.</p>
+            <p class="updated">Last updated: May 2, 2025</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+
+            <!-- Table of contents -->
+            <div class="toc">
+                <h3>Contents</h3>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#data-collected">What data we collect</a></li>
+                    <li><a href="#permissions">App permissions</a></li>
+                    <li><a href="#wifi-sync">Wi-Fi Sync</a></li>
+                    <li><a href="#third-party">Third-party SDKs</a></li>
+                    <li><a href="#children">Children's privacy</a></li>
+                    <li><a href="#changes">Changes to this policy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ol>
+            </div>
+
+            <!-- 1. Overview -->
+            <div class="section" id="overview">
+                <h2><span class="num">1</span> Overview</h2>
+                <div class="highlight-box">
+                    <p>SaveUp does not collect, transmit, or store any of your personal or financial data on external servers. Everything lives on your device.</p>
+                </div>
+                <p>SaveUp is an offline-first personal finance app for Android and Windows. All budgets, transactions, savings goals, and user profiles are stored locally in a SQLite database on your own device. We have no servers, no accounts, and no cloud infrastructure.</p>
+                <p>This Privacy Policy explains what limited data is accessed by the app and why, and how third-party libraries used in the app may behave.</p>
+            </div>
+
+            <!-- 2. Data collected -->
+            <div class="section" id="data-collected">
+                <h2><span class="num">2</span> What data we collect</h2>
+                <p><strong>We do not collect any data.</strong> All information you enter into SaveUp — transactions, budgets, account balances, goals, group names, and user names — is stored exclusively in a local SQLite database on your device.</p>
+                <ul>
+                    <li>No account registration required</li>
+                    <li>No email address, phone number, or identity information collected</li>
+                    <li>No analytics or crash reporting sent to our servers</li>
+                    <li>No advertising identifiers used</li>
+                    <li>No data sold or shared with third parties by us</li>
+                </ul>
+                <p>Profile photos you choose to add are stored only in the app's private storage directory on your device and are never uploaded anywhere.</p>
+            </div>
+
+            <!-- 3. Permissions -->
+            <div class="section" id="permissions">
+                <h2><span class="num">3</span> App permissions</h2>
+                <p>SaveUp requests the following permissions on Android:</p>
+
+                <div class="permission-row">
+                    <div class="perm-icon">📷</div>
+                    <div>
+                        <div class="perm-name">CAMERA</div>
+                        <div class="perm-desc">Used only to scan QR codes when joining a group. The camera is never accessed in the background and no images are saved or transmitted.</div>
+                    </div>
+                </div>
+                <div class="permission-row">
+                    <div class="perm-icon">🖼️</div>
+                    <div>
+                        <div class="perm-name">READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE</div>
+                        <div class="perm-desc">Used only when you choose to set a profile photo from your gallery. The selected image is copied to the app's private storage and the original is not modified.</div>
+                    </div>
+                </div>
+                <div class="permission-row">
+                    <div class="perm-icon">🔔</div>
+                    <div>
+                        <div class="perm-name">POST_NOTIFICATIONS</div>
+                        <div class="perm-desc">Used to send local notifications when recurring transactions are generated or when a budget limit is reached. No notifications are sent from external servers.</div>
+                    </div>
+                </div>
+                <div class="permission-row">
+                    <div class="perm-icon">📶</div>
+                    <div>
+                        <div class="perm-name">ACCESS_NETWORK_STATE / CHANGE_NETWORK_STATE</div>
+                        <div class="perm-desc">Used only to detect whether you are connected to a Wi-Fi network, which is required for the local Wi-Fi Sync feature. No internet connections are made by SaveUp itself.</div>
+                    </div>
+                </div>
+                <div class="permission-row">
+                    <div class="perm-icon">⏰</div>
+                    <div>
+                        <div class="perm-name">RECEIVE_BOOT_COMPLETED / WAKE_LOCK / SCHEDULE_EXACT_ALARM</div>
+                        <div class="perm-desc">Used by WorkManager to run background tasks that generate recurring transactions and check budget progress. These tasks run entirely on-device.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Wi-Fi Sync -->
+            <div class="section" id="wifi-sync">
+                <h2><span class="num">4</span> Wi-Fi Sync</h2>
+                <p>SaveUp includes an optional Wi-Fi Sync feature that lets two or more devices on the same local network exchange financial data directly — without any internet connection or intermediary server.</p>
+                <ul>
+                    <li>Sync only happens when you explicitly initiate it from the Sync screen</li>
+                    <li>Data travels only between devices on your local Wi-Fi network</li>
+                    <li>No data is sent to the internet or to our servers at any point</li>
+                    <li>mDNS (Bonjour/Zeroconf) is used for local device discovery</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>Wi-Fi Sync is peer-to-peer and local only. Your financial data never leaves your home or office network.</p>
+                </div>
+            </div>
+
+            <!-- 5. Third-party SDKs -->
+            <div class="section" id="third-party">
+                <h2><span class="num">5</span> Third-party SDKs</h2>
+                <p>SaveUp uses a small number of open-source libraries. Most have no data collection. One exception is noted below:</p>
+
+                <div class="third-party-card">
+                    <h4>Google ML Kit — Barcode Scanning</h4>
+                    <p>Used for QR code scanning (joining a group). ML Kit may send anonymous usage statistics to Google via Firebase Transport. This telemetry is controlled by Google, not by SaveUp. You can review Google's privacy practices at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+                </div>
+
+                <div class="third-party-card" style="margin-top: 12px;">
+                    <h4>Flutter framework (Google)</h4>
+                    <p>The app is built with Flutter. The framework itself does not collect data. See <a href="https://flutter.dev/privacy" target="_blank">flutter.dev/privacy</a>.</p>
+                </div>
+
+                <p style="margin-top: 16px;">All other libraries (sqflite, provider, fl_chart, workmanager, etc.) are local utilities with no network activity or data collection.</p>
+            </div>
+
+            <!-- 6. Children -->
+            <div class="section" id="children">
+                <h2><span class="num">6</span> Children's privacy</h2>
+                <p>SaveUp does not knowingly collect any personal information from children under the age of 13. The app does not require account creation and collects no personal data from any user, regardless of age.</p>
+            </div>
+
+            <!-- 7. Changes -->
+            <div class="section" id="changes">
+                <h2><span class="num">7</span> Changes to this policy</h2>
+                <p>If we make changes to this Privacy Policy, we will update the "Last updated" date at the top of this page. Significant changes will also be noted in the app's release notes.</p>
+                <p>Continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 8. Contact -->
+            <div class="section" id="contact">
+                <h2><span class="num">8</span> Contact</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li>Email: <a href="mailto:danmaialmeida@gmail.com" style="color: var(--green-dark);">danmaialmeida@gmail.com</a></li>
+                    <li>GitHub: <a href="https://github.com/Danmaialemida/SaveUp-App" style="color: var(--green-dark);">github.com/Danmaialemida/SaveUp-App</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 SaveUp · <a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
